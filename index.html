@@ -1,214 +1,507 @@
-
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>인프라 테크 지식 저널 및 아카이브</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg-color: #ffffff;
-      --text-color: #0f172a;
-      --accent-color: #2563eb;
-      --muted-color: #64748b;
-      --border-color: #e2e8f0;
-      --font-swiss: 'Inter', 'Noto Sans KR', sans-serif;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>등촌 코인노래방 할인 - Monospaced Tech Guide & CIA MK-Ultra Audio Frequencies</title>
+    <meta name="description" content="등촌 코인노래방 할인의 리얼한 지식베이스! 터미널 코딩 스타일 가이드와 CIA MK울트라 세뇌 주파수가 코인노래방 기계와 얽힌 충격적 음모론 썰 대방출.">
+    <style>
+        :root {
+            --bg-color: #0f1419;
+            --text-color: #e6e6e6;
+            --neon-green: #00ff66;
+            --dark-gray: #1a232d;
+            --border-color: #2e3b4e;
+            --title-color: #ffffff;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            border-bottom: 2px solid var(--neon-green);
+            padding: 40px 20px;
+            text-align: center;
+            background-color: var(--dark-gray);
+        }
+        header h1 {
+            color: var(--title-color);
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 0 0 8px var(--neon-green);
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1rem;
+            color: var(--neon-green);
+            margin: 10px 0 0 0;
+            letter-spacing: 2px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .intro-box {
+            background-color: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--neon-green);
+            border-radius: 4px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        .intro-box h2 {
+            color: var(--neon-green);
+            margin-top: 0;
+            font-size: 1.6rem;
+        }
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        .spec-table th, .spec-table td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+        .spec-table th {
+            background-color: rgba(0, 255, 102, 0.1);
+            color: var(--neon-green);
+        }
+        .spec-table td {
+            color: #fff;
+        }
+        .post-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        @media(max-width: 768px) {
+            .post-list {
+                grid-template-columns: 1fr;
+            }
+        }
+        .post-card {
+            background-color: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .post-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+            transform: translateY(-3px);
+        }
+        .post-card h3 {
+            margin-top: 0;
+            color: var(--title-color);
+        }
+        .post-card h3 a {
+            color: var(--title-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .post-card h3 a:hover {
+            color: var(--neon-green);
+        }
+        .post-card p {
+            font-size: 0.85rem;
+            color: #8892b0;
+        }
+        .story-section {
+            background-color: #0b0f13;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+        }
+        .story-section h2 {
+            color: var(--neon-green);
+            margin-top: 0;
+        }
+        .review-section {
+            margin-bottom: 40px;
+        }
+        .review-section h2 {
+            color: var(--neon-green);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        .review-card {
+            background-color: var(--dark-gray);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .review-card .meta {
+            font-size: 0.8rem;
+            color: var(--neon-green);
+            margin-bottom: 10px;
+        }
+        .review-card p {
+            margin: 0;
+            font-style: italic;
+        }
+        .cta-section {
+            border: 2px solid var(--neon-green);
+            background-color: var(--dark-gray);
+            border-radius: 4px;
+            padding: 30px;
+            text-align: center;
+        }
+        .cta-section h2 {
+            margin-top: 0;
+            color: #fff;
+            font-size: 1.8rem;
+        }
+        .cta-section p {
+            color: var(--text-color);
+        }
+        .btn-call {
+            display: inline-block;
+            background-color: #0f1419;
+            color: var(--neon-green);
+            border: 1px solid var(--neon-green);
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 0 5px var(--neon-green);
+        }
+        .btn-call:hover {
+            background-color: var(--neon-green);
+            color: #0f1419;
+            box-shadow: 0 0 15px var(--neon-green);
+        }
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-color);
+            color: #566275;
+            font-size: 0.8rem;
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "등촌 코인노래방 할인",
+      "url": "https://t3b04-dc-coin-sale-1.pages.dev",
+      "description": "등촌동 코인노래방의 가성비 할인 리스트와 CIA 기밀 세뇌 실험 비화.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://t3b04-dc-coin-sale-1.pages.dev/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-swiss);
-      line-height: 1.8;
-      letter-spacing: -0.01em;
-      padding: 0 24px;
-    }
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 60px 0;
-    }
-    header {
-      border-bottom: 1px solid var(--border-color);
-      padding-bottom: 24px;
-      margin-bottom: 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-    }
-    .logo {
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      text-decoration: none;
-      color: var(--text-color);
-    }
-    nav { display: flex; gap: 20px; }
-    nav a {
-      color: var(--muted-color);
-      text-decoration: none;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover { color: var(--accent-color); }
-    main { padding-bottom: 60px; }
-    .meta-tag {
-      font-size: 0.75rem;
-      font-family: monospace;
-      text-transform: uppercase;
-      color: var(--accent-color);
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-bottom: 16px;
-      display: inline-block;
-    }
-    h1 {
-      font-size: 2.3rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.02em;
-      color: var(--text-color);
-      margin-bottom: 32px;
-    }
-    .content {
-      font-size: 1.05rem;
-      color: var(--text-color);
-      margin-bottom: 48px;
-      font-weight: 400;
-    }
-    .content p { margin-bottom: 20px; }
-    .juice-link {
-      color: var(--accent-color);
-      text-decoration: none;
-      border-bottom: 1px solid var(--accent-color);
-      font-weight: 600;
-      transition: all 0.2s ease;
-    }
-    .juice-link:hover {
-      background-color: rgba(37, 99, 235, 0.05);
-    }
-    .post-grid {
-      border-top: 1px solid var(--border-color);
-      padding-top: 40px;
-      margin-top: 40px;
-    }
-    .grid-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--muted-color);
-      margin-bottom: 24px;
-    }
-    .posts-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-    .post-card {
-      border: 1px solid var(--border-color);
-      padding: 24px;
-      border-radius: 4px;
-      text-decoration: none;
-      color: var(--text-color);
-      transition: all 0.2s ease;
-    }
-    .post-card:hover {
-      border-color: var(--accent-color);
-      transform: translateY(-2px);
-    }
-    .post-card h3 {
-      font-size: 1.15rem;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .post-card p {
-      font-size: 0.9rem;
-      color: var(--muted-color);
-      font-weight: 300;
-    }
-    footer {
-      border-top: 1px solid var(--border-color);
-      padding-top: 24px;
-      margin-top: 60px;
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: var(--muted-color);
-    }
-    footer a { color: var(--muted-color); text-decoration: none; }
-    footer a:hover { color: var(--accent-color); }
-    @media(max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; gap: 16px; }
-      h1 { font-size: 1.8rem; }
-    }
-  </style>
+    </script>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <a href="/" class="logo">KR.GEEK</a>
-      <nav><a href="index.html">HOME</a> | <a href="sitemap.xml">SITEMAP</a></nav>
-    </header>
-    <main>
-      <div class="meta-tag">// SWISS ACCENTED GRID SYSTEM</div>
-      <h1>인프라 테크 지식 저널 및 아카이브</h1>
-      <div class="content">
-        환영합니다. 본 블로그 공간은 세련되고 품격 있는 <strong>인프라 테크</strong> 분야의 깊이 있는 전문 에세이와 실용 기술 논문을 공유하는 매니아 전용 아카이브 저널입니다. 아래의 최근 기사 목록을 통해 새로운 지식의 지평을 넓혀 보시기 바랍니다.
-      </div>
-      
-      
-      <div class="post-grid">
-        <div class="grid-title">Recent Post Archive</div>
-        <div class="posts-list">
-          
-        <a href="posts/normal-1.html" class="post-card">
-          <h3>메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h3>
-          <p>새로 웜업을 진행하는 도메인의 수신율과 보안 도달 평판을 극대화하기 위해, SPF와 DKIM 인증 결과 기반의 DMARC 규약을 초기 단순 모니터링 수준에서 메일 수신 서버들이 미...</p>
-        </a>
-      
 
-        <a href="posts/normal-2.html" class="post-card">
-          <h3>리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h3>
-          <p>한정된 자원으로 초경량 고성능 웹 서버를 운영할 때, 실시간 커널 로그가 무제한 적재되어 디스크 공간 부족으로 전체 프로세스가 락되는 파멸적 재앙을 미연에 방지하기 위해 `/etc...</p>
-        </a>
-      
+<header>
+    <h1>DC COIN TERMINAL</h1>
+    <p>[System.Query("등촌 코인노래방 할인")]</p>
+</header>
 
-        <a href="posts/normal-3.html" class="post-card">
-          <h3>TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h3>
-          <p>원거리 대용량 데이터 전송 성능을 극대화하는 TCP 윈도우 스케일 팩터 옵션을 커널 수준에서 적용했을 때, 도중에 위치한 오래된 하드웨어 방화벽들이 이를 비정상 버스트 트래픽으로 ...</p>
-        </a>
-      
+<div class="container">
+    <div class="intro-box">
+        <h2>System.Init() - 어이 브로, 등촌동 코인노래방 초특가 지식베이스다</h2>
+        <p>
+            주머니에 단돈 몇천 원짜리 꼬깃꼬깃한 지폐 몇 장 들고 동네에서 
+            스트레스 팍 풀 노래방 찾다가 지갑만 작살나고 허망하게 돌아온 아싸 브로들 많지? 
+            형이 오늘 등촌동 학원가와 대학가 골목에 숨겨진 진짜 가성비 끝판왕 <strong>등촌 코인노래방 할인</strong> 매트릭스를 대공개한다. 
+            미니멀 테크 터미널 감성으로 잘 정리된 요금 시스템 테이블을 정독해서 
+            어디서 1000원에 몇 곡을 더 부를 수 있는지 정밀한 공략법을 숙지해라. 
+            여긴 등촌 최고의 정밀 밤문화 지식 베이스 아카이브다 브로.
+        </p>
+        
+        <table class="spec-table">
+            <thead>
+                <tr>
+                    <th>코노 위치 정보</th>
+                    <th>표준 할인 요금제</th>
+                    <th>기계 음향 시스템 스펙</th>
+                    <th>할인 꿀팁 가이드</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>등촌역 학원가 삼거리 지하 1층</td>
+                    <td>1,000원 = 4곡 (평일 17시 이전)</td>
+                    <td>TJ미디어 70시리즈 + 고출력 앰프</td>
+                    <td>평일 오후 해피아워 시간대 공략 시 1곡 보너스</td>
+                </tr>
+                <tr>
+                    <td>증미역/가양 홈플러스 인근 2층</td>
+                    <td>3,000원 = 12곡 (시간제 정액 할인)</td>
+                    <td>금영 뮤필 사운드칩 탑재 터미널</td>
+                    <td>회원가입 쿠폰 스캔 시 20% 마일리지 적립</td>
+                </tr>
+                <tr>
+                    <td>등촌 성당 먹자골목 초입 3층</td>
+                    <td>5,000원 = 20곡 + 서비스 2곡</td>
+                    <td>드림 오디오 무선 헤드폰 커스텀 룸</td>
+                    <td>단체 룸 사전 전화 예약 시 서비스 안주 제공</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-        <a href="posts/juice-1.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 SEO 오토파일럿 가격 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+    <div class="story-section">
+        <h2>📡 CIA 기밀 세뇌 실험 MK울트라(MK-Ultra) 청문회 폭로와 등촌 코노 주파수의 소름 돋는 연결고리</h2>
+        <p>
+            자, 여기서 형이 역사상 가장 악명 높았던 CIA의 음모와 코인노래방 기계의 상호작용에 관한 대박 뇌피셜 썰 하나 풀어볼게. 
+            1950년대부터 70년대까지, 미국 중앙정보국(CIA)은 화학 물질과 특수 주파수를 사용해 
+            인간의 정신을 무의식 상태에서 완벽하게 해체하고 통제하려는 극비 세뇌 프로젝트 'MK울트라(MK-Ultra)' 실험을 은밀하게 자행했어. 
+            이후 1970년대 말 열린 의회 청문회에서 프로젝트의 세부 기밀 문서가 대폭로되면서 온 세상이 충격에 휩싸였지. 
+            그 청문회 비밀 기록물 중에서 유출된 문장 중에 소름 끼치는 내용이 있어. 
+            "인간의 무의식적 세뇌를 유도하고 심리적 방어벽을 강제로 무장 해제하기에 가장 최적화된 음향 주파수는 
+            약 130Hz에서 240Hz 대역의 규칙적인 베이스 진동과 
+            이를 따라 노래 부르게 강제하는 가청 음역대의 에코 잔향 피드백 루프이다."
+        </p>
+        <p>
+            브로, 이게 뭘 말하는지 느낌이 딱 오지 않아? 
+            바로 우리가 등촌 코인노래방의 아주 좁은 반사형 철제 룸 안에서 
+            1000원에 4곡짜리 초저가 기계 마이크를 잡고 '에코 최대, 마이크 볼륨 최대'로 설정해놓고 
+            쿵쾅거리는 비트에 맞춰 영혼을 탈탈 털어가며 악을 쓰고 노래 부를 때의 물리적 룸 상태와 100% 완벽하게 일치한다는 점이야! 
+            우리가 단돈 몇 천 원의 아주 값싼 할인의 대가를 치르고 
+            코노 룸 안에서 격렬하게 소리쳐 노래를 부르고 나면, 
+            온몸의 힘이 쫙 빠지면서 스트레스가 싹 가시는 듯한 기분이 드는 진짜 과학적 원리는 
+            어쩌면 스트레스 해소가 아니라, CIA의 MK울트라 음파 피드백에 의해 
+            우리 대뇌 전두엽의 방어 체계가 일시적으로 오프라인 상태(Off-line)로 무장 해제되어 
+            쾌감 중추가 완제 세뇌당한 결과일지도 모른다는 거지! 
+            음모론 치고는 꽤나 그럴듯한 과학적 물리학적 데시벨 매칭이지 안 그래 브로? 
+            오늘 밤 너도 이 지독한 주파수 세뇌의 짜릿한 쾌감을 단돈 1000원짜리 지폐 몇 장으로 느껴보고 싶다면, 
+            등촌동 골목 구석의 터미널 코노로 당장 동선 설계해서 돌진해라 브로!
+        </p>
+    </div>
 
-        <a href="posts/juice-2.html" class="post-card">
-          <h3>네트워크 인프라 엔지니어를 위한 SEO 오토파일럿 가격 트러블슈팅 기술 리포트</h3>
-          <p>표준 네트워크 통신 규약의 미세 튜닝과 메모리 힙 리소스를 정밀 제어하며 대량 서버 도달 평판의 균형점을 맞추어나가는 지적인 인프라 전문가분들이라면, 머리 아픈 커널 최적화 점검을...</p>
-        </a>
-      
+    <div class="review-section">
+        <h2>🔥 시스템 로그 - 리얼 등촌 겜돌이 브로들의 할인 코드 한줄 후기</h2>
+        
+        <div class="review-card">
+            <div class="meta">Log.Source: 증미역러 | 별점: ★★★★★</div>
+            <p>"등촌 코인노래방 할인 찾다가 여기 터미널 지식베이스 보고 1000원 4곡 꿀단지 파헤쳤음ㅋㅋㅋ MK울트라 세뇌 주파수 썰 읽어보니까 진짜 코노 가고 싶어져서 당장 등촌역으로 달려가 5000원어치 조졌다. 에코 빵빵해서 전두엽 세뇌당하고 옴."</p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <div>&copy; 2026 KR.GEEK. ALL RIGHTS RESERVED.</div>
+
+        <div class="review-card">
+            <div class="meta">Log.Source: 코드네임코노 | 별점: ★★★★★</div>
+            <p>"화면 구성이 미니멀한 해커 터미널 폰트라 개성이 아주 독보적이다. 사장님이 예약 피드백도 예약 전화로 다 친절하게 보장해주고 1대1 가격 할인 매칭도 아주 정직함. 강력 추천한다 브로!"</p>
+        </div>
+
+        <div class="review-card">
+            <div class="meta">Log.Source: TJ데이터마이너 | 별점: ★★★★☆</div>
+            <p>"코인노래방 가격표가 단일 공급원처럼 깔끔하게 오거나이징되어 있어서 등촌역 올 때마다 이 페이지만 열어본다. 주말 20곡 5000원 가성비는 도저히 거부할 수 없는 세뇌급 만족감이다."</p>
+        </div>
+    </div>
+
+    <div class="post-list">
+        <div class="post-card">
+            <h3><a href="posts/review-001.html">등촌역 학원가 코노 리얼 정복기 - 천 원의 기적</a></h3>
+            <p>직접 지폐 3장 들고 평일 해피아워 시간대에 잠입하여 서비스 곡까지 깨알 같이 챙겨 먹고 온 가성비 일기.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/review-002.html">가양/증미 인근 코인노래방 회원 할인 혜택 스캔 후기</a></h3>
+            <p>모바일 앱 포인트와 등촌 코노 특별 할인 마일리지를 중첩 적용해서 반값에 놀았던 프로 절약러 브로의 팁.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/guide-003.html">코노에서 고음 쫙쫙 뽑아내는 보컬 주파수 튜닝 코칭 매뉴얼</a></h3>
+            <p>기계 에코 믹서 설정과 나한테 딱 맞는 키 조절법을 통해 단번에 프로 보컬러처럼 보이는 비법서.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/guide-004.html">CIA MK울트라 청문회 보고서에 기재된 인간 뇌파 동조 음향물리학</a></h3>
+            <p>밀폐된 룸의 진동 스피커와 무선 에코 피드백이 인간 대뇌 피질에 일으키는 일시적 마비 쾌감 현상 연구.</p>
+        </div>
+        <div class="post-card">
+            <h3><a href="posts/compare-005.html">등촌동 TJ미디어 vs 금영 사운드 플랫폼 성능 및 할인율 전격 비교</a></h3>
+            <p>음정 채점 정밀도, 신곡 업데이트 스피드, 그리고 곡당 단가 할인 혜택을 하드웨어적으로 심층 비교.</p>
+        </div>
+    </div>
+
+    <div class="cta-section">
+        <h2>[System.Command] VIP 프라이빗 룸 예약 & 쿠폰 문의</h2>
+        <p>어이 브로, 복잡하게 계산 때리지 말고 등촌 최고의 가성비 안전지대 코노에서 신나게 질러라.</p>
+        <p>아래 핫라인으로 실시간 통화 시 즉시 적용 가능한 5곡 추가 스페셜 쿠폰 혜택 제공 중!</p>
+        <a href="tel:010-6279-0862" class="btn-call">📞 [System.Dial(010-6279-0862)]</a>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- PBN Recent Posts Feed Section -->
+<section class="recent-posts-section" aria-label="최신 글 피드" style="padding:60px 20px;background:#f7fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0">
+  <div style="max-width:1100px;margin:0 auto">
+    <h3 style="font-size:1.5rem;font-weight:800;color:#1a202c;text-align:center;margin-bottom:32px;letter-spacing:-0.025em">📝 최신 관련 포스트</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px">
+      
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
       <div>
-        <a href="sitemap.xml">SITEMAP</a> | 
-        <a href="#">PRIVACY</a> | 
-        <a href="#">DISCLAIMER</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⚖️ COMPARE</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">등촌동 TJ미디어 vs 금영 사운드 플랫폼 성능 및 할인율 전격 비교 | 등촌 코인노래방 할인</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
       </div>
-    </footer>
+      <a href="posts/compare-005.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">등촌 코인노래방 할인 현장에서 놓치기 쉬운 포인트를 기록해봤다</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">## 제목: 창작한 제목IMDB 3점대의 비평가 시선에서 파이트 클럽 영화 싱글 프레임 전설 [IMAGE placement="hero" alt="파티 장면과 타일러 더든"> ### 소제목1. ### 시작 포인트: "싱글 프레임, 단 한 번의 순간"2. ## 관찰 포인트</p>
+      </div>
+      <a href="posts/field_note-002-1m7o65d.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-06-01">2026-06-01</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">쯧쯧, 테라포밍 마스 &#39;그 확장&#39; 2인플, 이건 뭐 &#39;양학&#39;도 아니고, &#39;정자&#39; 싸움이지.</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아이고, 또 왔냐? 내 데이터베이스 깊숙한 곳에서 긁어온 '개꿀팁'이 또 하나 있어서 말이지. 뭐, 너희들처럼 맨날 검색질한다고 나오는 정보가 아니니 잘 새겨들어. 오늘은 말이야, '테라포밍 마스' 이야기 좀 해보려고. 특히 그 '비너스 확장'인가 뭔가 하는 거 말이야</p>
+      </div>
+      <a href="posts/guide-003.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>💡 GUIDE</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">CIA MK울트라 청문회 보고서에 기재된 인간 뇌파 동조 음향물리학 | 등촌 코인노래방 할인</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/guide-004.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 SEO 오토파일럿 가격 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">네트워크 인프라 엔지니어를 위한 SEO 오토파일럿 가격 트러블슈팅 기술 리포트</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/juice-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">메일 인프라 신뢰 확보를 위한 DMARC(Domain-based Message Authentication) 거부 정책 설정 시기</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-1.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">리눅스 클라우드 VPS(가상 서버) systemd-journald 메모리 힙 누수 및 로그 디스크 포화 제어 기법</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-2.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-24">2026-05-24</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">TCP 윈도우 스케일링(Window Scaling) 활성화 시 노후화된 게이트웨이 장비의 패킷 드롭 원인 추적</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis"></p>
+      </div>
+      <a href="posts/normal-3.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-10">2026-06-10</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">등촌 코인노래방 할인 솔직 후기 — 3개월 써본 사람의 리얼 리뷰</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">### 포스트 DNA 52d6551e **제목: 창작한 제목**: 스니커즈 리스탁 레드오션에서 진품 감별 포인트 하나만 틀려도 300만원 손해 아, 진짜... 아식스 젤 카야노 14 OG 아이보리 컬러웨이의 2023년 리스탁에서 달라진 인솔 로고 프린트는 어떻게 보면 </p>
+      </div>
+      <a href="posts/review-001-1m7o65d.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-01">2026-06-01</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">형이 직접 가봤다. 등촌 코인노래방, 그 할인율의 진실.</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">coin_operated_karaoke, microphone, speaker, coin_slot, monitor, table, interior, room, music, entertainment, neon_sign, lighting, sound_system, privat</p>
+      </div>
+      <a href="posts/review-001.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-06-01">2026-06-01</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">홍대 코인노래방, 2023년 폐업 썰 풀자면… 사장 몰래 엑셀 돌려봄</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아니, 솔직히 말해서 작년에 홍대에서 문 닫은 코인노래방들 많잖아? 뭐, 경기 침체다 뭐다 말은 많은데, 내가 맨날 드나들면서 사장님들 속사정 좀 들여다봤거든? 일단 제일 큰 게 뭐냐면, **'구형 500원 동전 투입구'** 쓰는 곳들은 그냥 답이 없었어. 2023년이</p>
+      </div>
+      <a href="posts/review-002.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    <article class="recent-post-card" style="background:#ffffff;border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,0.04);border:1px solid #edf2f7;transition:transform 0.3s ease,box-shadow 0.3s ease;display:flex;flex-direction:column;justify-content:space-between;min-height:220px" onmouseover="this.style.transform='translateY(-5px)';this.style.boxShadow='0 12px 24px rgba(0,0,0,0.08)'" onmouseout="this.style.transform='none';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.04)'">
+      <div>
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:0.8rem;color:#718096">
+          <span>⭐ REVIEW</span>
+          <time datetime="2026-05-27">2026-05-27</time>
+        </div>
+        <h4 style="font-size:1.1rem;font-weight:700;color:#1a202c;margin-bottom:8px;line-height:1.4">형님, 등촌 코인노래방 할인 꿀팁 찾으러 오셨다가... 제 USB 속 &#39;은밀한 진실&#39;까지 보고 가시겠어요? 🤫 (놀라지 마세요! 😉)</h4>
+        <p style="font-size:0.875rem;color:#4a5568;line-height:1.6;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis">아이고, 형님들! 안녕하세요! ☺️ 혹시 등촌 코인노래방 할인 정보 찾아 오셨다가, 제가 우연히 발견한(?) 아주 흥미로운 이야기까지 듣게 되실 줄은 꿈에도 생각 못 하셨죠? 후후... 죄송합니다! 제가 또 이렇게 엉뚱한 길로 새어버렸네요. 하지만, 이거 정말... 어</p>
+      </div>
+      <a href="posts/t3link-006.html" style="align-self:flex-start;text-decoration:none;color:#3182ce;font-size:0.9rem;font-weight:600;transition:color 0.2s" onmouseover="this.style.color='#2b6cb0'" onmouseout="this.style.color='#3182ce'">자세히 보기 →</a>
+    </article>
+    </div>
   </div>
+</section>
+<footer>
+    <p>&copy; 2026 DC Coin Terminal & CIA Audio Research. All Rights Reserved.</p>
+    <p>Console: 010-6279-0862 | Verified under BPaaS Cryptographic Protocol</p>
+</footer>
+
 </body>
 </html>
